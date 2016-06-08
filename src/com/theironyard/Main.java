@@ -72,7 +72,5 @@ public class Main {
                 },
                 new MustacheTemplateEngine()
         );
-
-        System.out.println("FUCK");
     }
 }
