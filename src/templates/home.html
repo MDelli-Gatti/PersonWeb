@@ -1,0 +1,16 @@
+<html>
+<body>
+Hello!
+<ul>
+{{#people}}
+<li><a href="/person?id={{id}}">{{firstName}} {{lastName}}</a></li>
+{{/people}}
+    </ul>
+{{#hasPrevious}}
+<a href="/?offset={{offsetPrevious}}">Previous</a>
+{{/hasPrevious}}
+{{#hasNext}}
+<a href="/?offset={{offsetNext}}">Next</a>
+{{/hasNext}}
+</body>
+</html>
