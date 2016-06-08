@@ -65,8 +65,9 @@ public class Main {
                 (request, response) -> {
                     HashMap m = new HashMap<>();
                     int idNum = Integer.valueOf(request.queryParams("id"));
-                    Person p = people.get(idNum - 1);
-                    m.put("id", p.id);
+                    Person per = people.get(idNum - 1);
+                    m.put("id", per.id);
+                    m.put("per", per);
                     return new ModelAndView(m, "person.html");
                 },
                 new MustacheTemplateEngine()
