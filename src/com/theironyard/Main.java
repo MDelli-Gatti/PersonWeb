@@ -18,6 +18,7 @@ public class Main {
     public static void parsePeople() throws FileNotFoundException {
         File f = new File("people.csv");
         Scanner fileScanner = new Scanner(f);
+        fileScanner.nextLine();
         while (fileScanner.hasNext()) {
             String line = fileScanner.nextLine();
             String[] columns = line.split(",");
@@ -43,11 +44,16 @@ public class Main {
                         if (offset <= 0) {
                             hasPrevious = false;
                         }
-                        else{ hasPrevious = true;}
+                        else {
+                            hasPrevious = true;
+                        }
+
                         if (offset+20 >= 1000){
                             hasNext = false;
                         }
-                        else{ hasNext = true;}
+                        else {
+                            hasNext = true;
+                        }
                     }
                     ArrayList p = new ArrayList<>(people.subList(offset, offset + 20));
                     HashMap m = new HashMap();
